@@ -2,40 +2,22 @@ public class Main {
     public static void main(String[] args) {
 
 
+        BuilderPizzas nuevoBuilder = new BuilderPizzas();//Creo builder
+        Pizzas pizzaDefault2 = new Pizzas();
+        pizzaDefault2 = nuevoBuilder.build();
+        System.out.println(pizzaDefault2);
 
-        BuilderPizzas miBuilder = new BuilderPizzas();//Creo builder
-        Pizzas pizzaDefault = new Pizzas();
-        pizzaDefault = miBuilder.build();
-        System.out.println(pizzaDefault);
 
+        Pizzas nuevaPizza = new BuilderPizzas().setSinGluten(true).setRelleno(true).setCebolla(true).build();
+        System.out.println(nuevaPizza);
 
-        Pizzas miPizza = new BuilderPizzas().setChampinhones(true).setPinha(true).build();
-        System.out.println(miPizza);
-
-        Pizzas miPizza2 = new BuilderPizzas()
-                .setJamon(true)
-                .setRelleno(true)
-                .setTamanho(Pizzas.FAMILIAR)
-                .setSalsa(true)
+        Pizzas nuevaPizza2 = new BuilderPizzas()
+                .setJamon(false)
+                .setPinha(false)
+                .setChampinhones(true)
+                .setTipoMasa(3)
                 .build();
-        System.out.println(miPizza2);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        System.out.println(nuevaPizza2);
 
 
     }
