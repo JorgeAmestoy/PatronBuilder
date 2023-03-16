@@ -15,7 +15,7 @@ public class Main {
                 .setJamon(false)
                 .setPinha(false)
                 .setChampinhones(true)
-                .setTipoMasa(3)
+                .setTipoMasa(Pizzas.FINA)
                 .build();
         System.out.println(nuevaPizza2);
 
