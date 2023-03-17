@@ -91,9 +91,40 @@ usar el Builder con el fin de construir el número
 de objetos que queramos con los atributos deseados.
 
 En relación a nuestra casa, se podría crear una nueva clase
-llamada por ejemplo CasasFactory para crear las diferentes
-casas. 
+llamada por ejemplo CasasFactory para define los métodos
+para construir las partes de la casa
+```
+public interface CasasBuilder {
+    void hacerPiscina();
+    void hacerSuelo();
+}
 
+```
+Luego, haría una implementación de CasasBuilder para cada tipo de casa:
+
+```
+public class casaNuevaBuilder implements CocheBuilder {
+    private Coche coche = new Coche();
+    private Casa casa = new Casa();
+
+    public void hacerPiscina() {
+        coche.setPiscina("Con piscina");
+    }
+    
+```
+Devolviendonos la casa final con todas las especificaciones:
+
+```
+    public Casa getCasa() {
+        return casa;
+    }
+}
+
+    
+```
+
+Por último, crearía la fábrinca de casas, por ejemplo casasFactory, usando
+el casasBuilder para construir diferentes tipos:
 
 
 #### DIAGRAMA
