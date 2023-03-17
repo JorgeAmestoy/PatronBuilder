@@ -30,7 +30,6 @@ de objetos que queramos con los atributos deseados.
              
 -_pizza: Pizzas
  +build(): Pizzas
- BuilderPizzas()
 +BuilderPizzas()
 +setTipoMasa(int tipoMasa)
 +setRelleno(boolean relleno)
